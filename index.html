@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dupla de Emojis 🎭</title>
+  <title>Dupla de Emojis 💥</title>
   <style>
     body {
       margin: 0;
@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #f1f2f6;
+      background: linear-gradient(135deg, #2c3e50, #000000);
       font-family: sans-serif;
     }
 
@@ -25,27 +25,32 @@
       font-size: 6rem;
       transition: transform 0.2s ease;
       user-select: none;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     .emoji:hover {
-      transform: scale(1.2) rotate(5deg);
+      transform: scale(1.2) rotate(8deg);
     }
   </style>
 </head>
 <body>
   <div class="emoji-container">
-    <div class="emoji" onclick="changeEmoji(this)">😀</div>
-    <div class="emoji" onclick="changeEmoji(this)">😂</div>
+    <div class="emoji" onclick="changeEmoji(this)">🐸</div>
+    <div class="emoji" onclick="changeEmoji(this)">🤖</div>
   </div>
 
   <script>
-    const emojis = ["😀", "😂", "😎", "🥲", "🤯", "🤡", "👽", "🐸", "🐱", "🦄", "💩", "😈", "👻", "🥸", "😴"];
+    const emojis = [
+      "😀", "😂", "😎", "🥲", "🤯", "🤡", "👽", "🐸", "🐱", "🦄", "💩", "😈", "👻", "🥸", "😴",
+      "🐶", "🐵", "🐷", "🦊", "🦁", "🐔", "🦖", "🐙", "🧠", "💀", "🔥", "🌈", "⚡", "💎", "🍕", "🍩", "🎮", "🎉", "🧸"
+    ];
 
     function changeEmoji(element) {
       let newEmoji;
       do {
         newEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-      } while (element.textContent === newEmoji); // Evita repetir o mesmo
+      } while (element.textContent === newEmoji);
       element.textContent = newEmoji;
     }
   </script>
